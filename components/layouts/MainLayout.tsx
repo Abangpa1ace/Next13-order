@@ -1,30 +1,19 @@
 "use client";
 
-import GlobalStyle from "@/styles/GlobalStyle";
-import defaultTheme from "@/styles/theme";
+import { makeServer } from "@/mock/server";
+import '@/styles/global.css';
 import { PropsWithChildren } from 'react';
 import { QueryClient, QueryClientProvider } from "react-query";
-import { RecoilRoot } from "recoil";
-import styled, { ThemeProvider } from "styled-components";
+
+
+makeServer({ environment: "dev" });
 
 const queryClient = new QueryClient();
 
 export default function MainLayout({ children }: PropsWithChildren) {
   return (
     <QueryClientProvider client={queryClient}>
-      <RecoilRoot>
-        <ThemeProvider theme={defaultTheme}>
-          <GlobalStyle />
-          <Main>
-            {children}
-          </Main>
-        </ThemeProvider>
-      </RecoilRoot>
+      {children}
     </QueryClientProvider>
   )
 }
-
-export const Main = styled.div`
-  position: relative;
-  min-height: 100vh;
-`;

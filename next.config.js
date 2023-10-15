@@ -18,14 +18,9 @@ const nextConfig = {
     return [
       {
         source: '/',
-        destination: '/signup',
+        destination: '/order',
         permanent: true,
       },
-      {
-        source: '/signup',
-        destination: '/signup/occupation',
-        permanent: true,
-      }
     ]
   }
 };
