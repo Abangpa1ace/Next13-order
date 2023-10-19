@@ -1,13 +1,21 @@
-import CategoryTabList from "./CategoryTabList";
-import styles from './styles.module.css';
+"use client";
+
+import { useState } from "react";
+import ProductList from "./ProductList";
+import styles from './styles.module.scss';
+import TabList from "./TabList";
 
 const Order = () => {
+  const [selectedCategory, setSelectedCategory] = useState<string>('');
+
   return (
-    <>
-      <main className={styles.main}>
-        <CategoryTabList />
-      </main>
-    </>
+    <main className={styles.main}>
+      <TabList
+        selectedCategory={selectedCategory}
+        setSelectedCategory={setSelectedCategory}
+      />
+      <ProductList selectedCategory={selectedCategory} />
+    </main>
   )
 }
 

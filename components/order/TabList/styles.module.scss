@@ -1,0 +1,29 @@
+.tabList {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  border-bottom: 2px solid var(--blue-400);
+}
+
+.tabItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 100%;
+  color: var(--gray-800);
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 8px 8px 0 0;
+  cursor: pointer;
+
+  & + & {
+    margin-left: 8px;
+  }
+}
+
+.selectedTabItem {
+  background-color: var(--blue-400);
+  color: var(--white);
+  font-weight: 700;
+}

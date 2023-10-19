@@ -33,11 +33,11 @@ export function makeServer({ environment = "dev" } = {}) {
       })
 
       this.get("/products", (schema, request) => {
-        const { category } = JSON.parse(request.requestBody);
+        const { category } = request.queryParams;
 
         return {
           message: 'SUCCESS',
-          data: schema.products.all("products").models.filter(product => product.category === category),
+          data: schema.products.all("products").models.filter(product => product.categoryId === category),
         }
       })
 

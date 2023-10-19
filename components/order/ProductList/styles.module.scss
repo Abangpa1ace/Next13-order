@@ -1,0 +1,41 @@
+.placeholder {
+  padding: 28px 0;
+  color: var(--gray-700);
+  font-size: 16px;
+  text-align: center;
+}
+
+.productList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.productCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  background-color: var(--blue-80);
+  border-radius: 16px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--blue-100);
+  }
+}
+
+.productName {
+  color: var(--gray-700);
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.productPrice {
+  margin-top: 8px;
+  color: var(--blue-500);
+  font-size: 15px;
+  font-weight: 600;
+}
