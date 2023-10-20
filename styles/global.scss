@@ -1,4 +1,7 @@
 :root {
+	--width-s: 520px;
+	--width-m: 768px;
+	--width-l: 1024px; 
 	--white: #fff;
 	--black: #000;
 	--warning: #ffbf00;
@@ -113,6 +116,10 @@ body {
 ol, ul {
 	list-style: none;
 }
+button {
+	background: none;
+	border: none;
+}
 blockquote, q {
 	quotes: none;
 }
@@ -127,4 +134,7 @@ table {
 }
 * {
   box-sizing: border-box;
+}
+button {
+	cursor: pointer;
 }

@@ -1,7 +1,7 @@
 "use client";
 
 import { makeServer } from "@/mock/server";
-import '@/styles/global.css';
+import '@/styles/global.scss';
 import { PropsWithChildren } from 'react';
 import { QueryClient, QueryClientProvider } from "react-query";
 
