@@ -1,19 +1,8 @@
-import { CartProduct, Product } from "@/types/order";
 import getTotalPrice from "@/utils/order/getTotalPrice";
-interface OrderStoreState {
-  // state
-  cartList: CartProduct[];
-  selectedProductId: string;
-  // action
-  addCartProduct: (product: Product) => void;
-  increaseCartProduct: (productId: string) => void;
-  decreaseCartProduct: (productId: string) => void;
-  removeCartProduct: (productId: string) => void;
-  setSelectedProductId: (productId: string) => void;
-}
 
-const orderStore = <OrderStoreState>
-  (set, get) => ({
+
+const orderStore = 
+  (set, get, store) => ({
     cartList: [],
     selectedProductId: '',
     // 장바구니에 항목 새로 추가
@@ -91,7 +80,7 @@ const orderStore = <OrderStoreState>
       set(state => {
         const cartList = state.cartList.filter(cartItem => cartItem.id !== productId);
 
-        return { cartList, selectedProductId: cartList.length ? cartList[0].id : '' };
+        return { cartList, selectedProductId: cartList.length ? productId === state.selectedProductId ? cartList[0].id : state.selectedProductId : '' };
       })
     },
     setSelectedProductId: (productId) => {

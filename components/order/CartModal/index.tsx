@@ -6,7 +6,7 @@ import styles from './styles.module.scss';
 const CartModal = () => {
   const { cartList } = useOrderStore();
   const listTotalPrice = cartList.reduce((acc, product) => acc + product.totalPrice, 0);
-  
+
   return (
     <aside className={`${styles.cartModal} ${cartList.length && styles.onModal}`}>
       <CartProductController />

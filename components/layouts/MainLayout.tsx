@@ -10,7 +10,11 @@ makeServer({ environment: "dev" });
 
 const queryClient = new QueryClient();
 
-export default function MainLayout({ children }: PropsWithChildren) {
+export default function MainLayout({ children }: PropsWithChildren) {  
+  // useEffect(() => {
+  //   throw new Error("root error!")
+  // }, [])
+
   return (
     <QueryClientProvider client={queryClient}>
       {children}
