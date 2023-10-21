@@ -1,4 +1,4 @@
-import useOrderStore from "@/store/useOrderStore";
+import { useOrderStore } from "@/store";
 import { Product } from "@/types/order";
 import styles from './styles.module.scss';
 

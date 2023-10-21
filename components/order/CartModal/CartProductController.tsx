@@ -1,4 +1,4 @@
-import useOrderStore from '@/store/useOrderStore';
+import { useOrderStore } from '@/store';
 import styles from './styles.module.scss';
 
 const CartProductController = () => {

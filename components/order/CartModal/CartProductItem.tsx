@@ -1,4 +1,4 @@
-import useOrderStore from "@/store/useOrderStore";
+import { useOrderStore } from "@/store";
 import { CartProduct } from "@/types/order";
 import { MouseEvent } from "react";
 import styles from './styles.module.scss';

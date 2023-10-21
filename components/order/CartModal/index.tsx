@@ -1,4 +1,4 @@
-import useOrderStore from "@/store/useOrderStore";
+import { useOrderStore } from "@/store";
 import CartProductController from "./CartProductController";
 import CartProductItem from "./CartProductItem";
 import styles from './styles.module.scss';
