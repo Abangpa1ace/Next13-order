@@ -16,8 +16,11 @@ export default function MainLayout({ children }: PropsWithChildren) {
   // }, [])
 
   return (
-    <QueryClientProvider client={queryClient}>
-      {children}
-    </QueryClientProvider>
+    <>
+      <QueryClientProvider client={queryClient}>
+        {children}
+      </QueryClientProvider>
+      <div id="modal-root" />
+    </>
   )
 }
